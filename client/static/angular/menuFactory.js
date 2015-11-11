@@ -1,4 +1,4 @@
-myApp.factory('userFactory', function ($http) {
+myApp.factory('menuFactory', function ($http) {
 	var factory = {};
 	var currentUser;
 

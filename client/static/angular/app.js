@@ -4,7 +4,11 @@ var myApp = angular.module('myApp', ['ngRoute']);
 myApp.config(function ($routeProvider) {
 	$routeProvider
 	.when('/',{
-		templateUrl: 'partials/dashboard.html'
+		templateUrl: 'partials/home.html'
+	})
+
+	.when('/addMenu',{
+		templateUrl: 'partials/addMenu.html'
 	})
 
 	// })
