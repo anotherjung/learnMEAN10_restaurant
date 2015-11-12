@@ -11,6 +11,25 @@ myApp.config(function ($routeProvider) {
 		templateUrl: 'partials/addMenu.html'
 	})
 
+	.when('/displayMenu',{
+		templateUrl: 'partials/displayMenu.html'
+	})
+
+	.when('/thisMenu/:id',{
+		templateUrl: 'partials/thisMenu.html'
+	})
+
+	.when('/addOrder',{
+		templateUrl: 'partials/addOrder.html'
+	})
+
+	.when('/thisOrder/:id',{
+		templateUrl: 'partials/thisOrder.html'
+	})
+
+
+
+
 	// })
 	// .otherwise({
 	// 	redirectTo: '/'
