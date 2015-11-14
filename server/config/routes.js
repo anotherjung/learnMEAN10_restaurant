@@ -1,14 +1,17 @@
 //MVC1a for routes
 var mongoose = require('mongoose');
-// var Answer = mongoose.model('Answer');
-var Menu = mongoose.model('Menu');
-var Order = mongoose.model('Order');
+
 
 //MVC2h moved to model
+// create connection to models
+var Menu = mongoose.model('Menu');
+var Order = mongoose.model('Order');
+var Customer = mongoose.model('Customer');
 
 //MVC2c for controller
 var menus  = require('../controllers/menus.js');
 var orders = require('../controllers/orders.js');
+var customers = require('../controllers/customers.js');
 
 //start MVC1d export
 module.exports = function(app) {
@@ -83,6 +86,25 @@ module.exports = function(app) {
 		orders.editthisorder(req, res)
 	})
 
-	//ends routes
+	app.get('/getCustomers', function (req, res) {
+		customers.getcustomers(req,res)
+	})
 
+	app.post('/addCustomer', function (req, res) {
+		customers.addcustomer(req,res)
+	})	
+
+	app.post('/deleteCustomer', function (req, res) {
+		customers.deletecustomer(req, res)
+	})
+
+	app.get('/getThisCustomer', function (req, res) {
+		customers.getthiscustomer(req, res)
+	})
+
+	app.post('/editThisCustomer', function (req, res) {
+		customers.editthiscustomer(req, res)
+	})
+
+	//ends routes
 }//ends MVC export

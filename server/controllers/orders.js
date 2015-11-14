@@ -19,6 +19,7 @@ module.exports = {
 		//after assocation
 		 Order.find({})
 		 .populate('menu')
+		 .populate('_customer')
 		 .exec(function(err, results) {
 		 	if(err) {
 		 		console.log('con getorders',err)
@@ -35,7 +36,8 @@ module.exports = {
 			{name:req.body.name, 
 				type:req.body.type, 
 				total:req.body.total,
-				menu: req.body.menu,  
+				menu: req.body.menu, 
+				_customer: req.body._customer, 
 				created:Date.now()}
 			);
 		cc.save(function(err) {

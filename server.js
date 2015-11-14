@@ -10,7 +10,7 @@ var mongoose = require('mongoose');
 	require('./server/config/mongoose.js');
 
 //static content
-app.use(express.static(path.join(__dirname, "./client/static")));
+app.use(express.static(path.join(__dirname, "./client")));
 
 	//start MVC1b require for routes
 	var routes_setter = require('./server/config/routes.js');

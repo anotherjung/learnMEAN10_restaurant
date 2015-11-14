@@ -67,7 +67,7 @@ module.exports = {
 	},
 
 	editthismenu: function(req, res) {
-		console.log('con editthismenu', req.body)
+		console.log('con editthismenu', req.body);
 		Menu.update({_id:req.body._id}, {name:req.body.name, group:req.body.group, imageurl:req.body.imageurl, price:req.body.price}, function(err, output) {
 			if (err) {
 				console.log('err editthismenu', err);
